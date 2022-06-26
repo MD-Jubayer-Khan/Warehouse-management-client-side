@@ -6,6 +6,7 @@ import Login from './AuthComponent/Login/Login';
 import ManageItems from './component/ManageItems/ManageItems';
 import MyItems from './component/MyItems/MyItems';
 import Header from './component/shared/Header/Header';
+import Footer from './component/shared/Footer/Footer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/manageItems' element={<ManageItems></ManageItems>}></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

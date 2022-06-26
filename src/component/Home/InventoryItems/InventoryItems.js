@@ -11,14 +11,14 @@ const InventoryItems = () => {
     },[])
     return (
         <div className='bg-light inventory-item d-flex flex-wrap ' >
-            <div className='col-md-2 mt-3 container p-4'>
+            <div className='col-md-2 mt-3 container p-4 border'>
                 <h2>Some of </h2> 
                 <h3>Our Items</h3> 
                 <p>Here's we stored various kind of electronics product such as computer, laptop, mobile, camera...etc want to know more about us</p> 
                 <button className='btn btn-info border'>Click here</button>
             </div>
             {
-                items.map(item => <Item key={item.id} name={item.name} img={item.img} seller={item.seller}></Item>)
+                items.map(item => <Item key={item._id} name={item.name} img={item.img} seller={item.seller}></Item>)
             }
 
         </div>
