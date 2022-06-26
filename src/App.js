@@ -6,7 +6,9 @@ import Login from './AuthComponent/Login/Login';
 import ManageItems from './component/ManageItems/ManageItems';
 import MyItems from './component/MyItems/MyItems';
 import Header from './component/shared/Header/Header';
-import Footer from './component/shared/Footer/Footer'
+import NotFound from './component/shared/NotFound/NotFound';
+import InventoryId from './component/Home/InventoryId/InventoryId';
+
 
 function App() {
   return (
@@ -17,11 +19,12 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/inventory/:id' element={<InventoryId></InventoryId>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/manageItems' element={<ManageItems></ManageItems>}></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-      <Footer></Footer>
     </div>
   );
 }

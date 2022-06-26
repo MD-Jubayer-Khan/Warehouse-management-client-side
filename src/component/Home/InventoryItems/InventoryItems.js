@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './InventoryItems.css'
 
 const InventoryItems = () => {
@@ -18,22 +19,31 @@ const InventoryItems = () => {
                 <button className='btn btn-info border'>Click here</button>
             </div>
             {
-                items.map(item => <Item key={item._id} name={item.name} img={item.img} seller={item.seller}></Item>)
+                items.map(item => <Item key={item._id} item={item}></Item>)
             }
 
         </div>
     );
 
-    function Item (props) {
+    function Item ({item}) {
+        
+        const navigate = useNavigate();
+
+        const handleDynamicRout = id => {
+                navigate(`/inventory/${id}`)
+            }
+
         return (
                 <div>
                  <div className="card m-4 p-4 col-md-5 card-item" style={{width:'170px',
                 }} >
-                   <img src={props.img} className="card-img-top" alt="..."/>
+                   <img src={item.img} className="card-img-top" alt="..."/>
                    <div classNames="card-body">
-                     <h4 className="card-title">{props.name}</h4>
-                     <p className="card-text">Seller{props.seller}</p>
-                     <button href="#" className="btn btn-primary">Update</button>
+                     <h4 className="card-title">{item.name}</h4>
+                     <p className="card-text">Supplier: {item.supplier}</p>
+                     <p>Price:{item.price}</p>
+                     <p>Quantity:{item.quantity}</p>
+                     <button onClick={()=> handleDynamicRout(item._id)} className="btn btn-primary">Update</button>
                    </div>
                  </div>
                 </div>
