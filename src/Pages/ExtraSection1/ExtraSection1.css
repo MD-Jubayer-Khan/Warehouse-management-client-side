@@ -1,0 +1,6 @@
+.section-one{
+    display: flex;
+    flex-wrap: wrap;
+    color: #7d7e81;
+    margin-bottom: 30px;
+}

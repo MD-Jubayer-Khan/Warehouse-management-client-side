@@ -5,7 +5,7 @@ const InventoryId = () => {
     const {id} = useParams()
     return (
         <div>
-            <h2>This is {id}</h2>
+            <h2>This is {id.name}</h2>
         </div>
     );
 };

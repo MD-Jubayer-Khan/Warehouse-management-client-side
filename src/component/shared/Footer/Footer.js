@@ -20,7 +20,7 @@ const Footer = () => {
                      src={img}
                      width="300"
                      height="200"
-                     alt="React Bootstrap logo"
+                     alt="logo"
                   />
             </div>
             <div className='col-md-2 mt-4'>
@@ -29,9 +29,9 @@ const Footer = () => {
                <p>Laptop</p>
                <p>Mobile</p>
                <p>Freeze</p>
-               <p>Any electronics device</p>
+               <p>All electronics device</p>
             </div>
-            <div className='col-md-4 mt-4'>
+            <div className='col-md-4 mt-4 flex-wrap'>
                 <h2 className='mt-4'>Solution</h2>
                 <p>E-commerce distribution</p>
                 <p>F-commerce</p>
@@ -47,6 +47,7 @@ const Footer = () => {
                 <p>Join with warehouse</p>
                 <p>About electronics warehouse</p>
             </div>
+            <p className='mx-auto'><span> &copy; </span> All right reserved md jubayer khan</p>
         </div>
     );
 };
