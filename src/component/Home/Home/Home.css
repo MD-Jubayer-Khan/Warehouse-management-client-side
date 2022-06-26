@@ -2,3 +2,9 @@
     height: 800px;
     background-color: #54576d;
 }
+
+@media screen and (max-width:668px) {
+  .top-area {
+     width: 100%;
+    }
+  }

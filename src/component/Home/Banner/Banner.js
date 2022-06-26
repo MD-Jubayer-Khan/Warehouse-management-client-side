@@ -5,7 +5,7 @@ import './Banner.css'
 const Banner = () => {
     return (
          <div className='d-flex container flex-wrap'>
-             <h1 className='text-white col-md-5'>Warehouse <br />Management <br /> Software</h1>
+             <h1 className='text-white col-md-5 text-center'>Warehouse <br />Management <br /> Software</h1>
              <img style={{opacity:'0.4'}} className='rounded img-fluid' src={img} alt="management images"></img>
          </div>
 
