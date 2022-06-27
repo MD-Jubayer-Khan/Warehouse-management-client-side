@@ -4,7 +4,10 @@ import './ExtraSection1.css'
 
 const ExtraSection1 = () => {
     return (
-        <div className='container section-one'>
+        <div className='container '
+         style={{display: 'flex', flexWrap:' wrap',
+          color: '#7d7e81',
+          marginBottom:' 30px'}}>
           <div className='col-md-7'> 
               <img className='img-fluid mt-4 rounded' 
                 src={img}

@@ -9,11 +9,12 @@ import ExtraSection2 from '../../../Pages/ExtraSection2/ExtraSection2';
 const Home = () => {
     return (
         <div>
-            <div className='top-area w-100'>
+            <div style={{backgroundColor:'#54576d', height: '800px'}}>
               
                  <Banner></Banner>
                  <InventoryItems></InventoryItems>
             </div>
+            {/* <h2>Something</h2> */}
             <ExtraSection1></ExtraSection1>
             <ExtraSection2></ExtraSection2>
             <Footer></Footer>

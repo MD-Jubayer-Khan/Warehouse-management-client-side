@@ -3,6 +3,7 @@
       "_id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
       "name": "Cannon AE1",
       "supplier": "Cannon",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 420,
       "img": "https://images.unsplash.com/photo-1508185644026-3759baed1f69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80",
       "quantity": 15
@@ -11,6 +12,7 @@
       "_id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
       "name": "Mac-book M-1 Max",
       "supplier": "Apple",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 1960,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlUyoeJai6c9hRtcVXjg_UvYy4gUlvL_6D0QbDz3UzhYYIePfuTOJf9aN3IDaJS24SRis&usqp=CAU",
       "quantity": 10
@@ -19,6 +21,7 @@
       "_id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
       "name": "Galaxy fold 3",
       "supplier": "Samsung",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 245,
       "img": "https://www.cnet.com/a/img/resize/48dc9941fd2ea6361e9f5e002d8eb12e4797b6b7/2021/01/07/3626616c-83af-4199-a029-76db418938f0/galaxy-z-flip-fold-samsung-product-promo-hoyle-2021.jpg?auto=webp&fit=crop&height=675&width=1200",
       "quantity": 11
@@ -27,6 +30,7 @@
       "_id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
       "name": "Cannon Ha55",
       "supplier": "Cannon",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 229,
       "img": "https://i.pinimg.com/736x/55/d7/09/55d7092ec0b35dd3af52b2be92b0ac53.jpg",
       "quantity": 25
@@ -35,6 +39,7 @@
       "_id": "4bf9798f-bc-4a83-b0c6-6a3b816fe922",
       "name": "Computer",
       "supplier": "Intel",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 287,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx_PHONbGTvAmCvxfqanxq7Uzv_TUnqp-E4A&usqp=CAU",
       "quantity": 12
@@ -43,6 +48,7 @@
       "_id": "4bf97-63bc-4a83-b0c6-6a3b816fe922",
       "name": "Air condition",
       "supplier": "Samsung",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 138,
       "img": "https://os-wordpress-media.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/11/24212247/Air-Conditioner-Buying-Guide.jpg",
       "quantity": 10
@@ -51,6 +57,7 @@
       "_id": "4bf9798f-63bc-4a83-b0c6-6a3b822",
       "name": "Freeze",
       "supplier": "Walton",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 226,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRboNKABhumi-XPzV2HTOaxGFlnZs8BoOCiyw&usqp=CAU",
       "quantity": 14
@@ -59,6 +66,7 @@
       "_id": "4bf9798f-63bc-b0c6-6a3b816fe922",
       "name": "Watch",
       "supplier": "Apple",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 319,
       "img": "https://images-na.ssl-images-amazon.com/images/G/31/img21/CEPC/Electronics/Revamp/xcm_banners_01_feb22_564x564_in-en._CB628916123_.jpg",
       "quantity": 32
@@ -67,6 +75,7 @@
       "_id": "4b98f-63bc-4a83-b0c6-6a3b16fe922",
       "name": "Headphon",
       "supplier": "sonny",
+      "describe" : "Warehouse management encompasses the principles and processes involved in running the day-to-day operations of a warehouse.",
       "price": 260,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FElWXJqIw1ZVwHKMx24DNwPmJCh_2cU6MfTlFeZcvAmW4HejZA-9KwL2KcZfNHv2Hxk&usqp=CAU",
       "quantity": 41

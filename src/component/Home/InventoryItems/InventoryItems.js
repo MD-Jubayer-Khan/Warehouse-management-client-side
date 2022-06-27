@@ -11,12 +11,12 @@ const InventoryItems = () => {
         .then(data => setItems(data.slice(0, 4)))
     },[])
     return (
-        <div className='bg-light inventory-item d-flex flex-wrap ' >
+        <div className=' inventory-item d-flex flex-wrap '  >
             <div className='col-md-2 mt-3 container p-4 border'>
                 <h2>Some of </h2> 
                 <h3>Our Items</h3> 
                 <p>Here's we stored various kind of electronics product such as computer, laptop, mobile, camera...etc want to know more about us</p> 
-                <button className='btn btn-info border'>Click here</button>
+                <button className='btn btn-info border'>Manage Items</button>
             </div>
             {
                 items.map(item => <Item key={item._id} item={item}></Item>)
@@ -29,17 +29,20 @@ const InventoryItems = () => {
         
         const navigate = useNavigate();
 
-        const handleDynamicRout = id => {
-                navigate(`/inventory/${id}`)
+        const handleDynamicRout = (id) => { 
+                navigate(`/inventory/${id}`);
+
+
             }
 
         return (
                 <div>
-                 <div className="card m-4 p-4 col-md-5 card-item" style={{width:'170px',
+                 <div className="card m-4 p-4 col-md-5 card-item" style={{width:'200px',
                 }} >
                    <img src={item.img} className="card-img-top" alt="..."/>
                    <div classNames="card-body">
                      <h4 className="card-title">{item.name}</h4>
+                     <p>description: {item.describe.slice(0, 30)}</p>
                      <p className="card-text">Supplier: {item.supplier}</p>
                      <p>Price:{item.price}</p>
                      <p>Quantity:{item.quantity}</p>

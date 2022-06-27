@@ -10,4 +10,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+};
+
+.top-bg{
+  height: 800px;
+  background-color: #54576d;
+};

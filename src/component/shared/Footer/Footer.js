@@ -5,7 +5,11 @@ import img from './Icon/images.png'
 
 const Footer = () => {
     return (
-        <div className='footer-area'>
+        <div >
+            <div className='footer-area' style={{   display:' flex',
+            width: '100%',
+            backgroundColor: '#54576d',
+            color:' rgb(216, 216, 216)'}}>
             <div className='container col-md-2 first-section'>
                  <img
                      src={logo}
@@ -31,7 +35,7 @@ const Footer = () => {
                <p>Freeze</p>
                <p>All electronics device</p>
             </div>
-            <div className='col-md-4 mt-4 flex-wrap'>
+            <div className='col-md-4 mt-4'>
                 <h2 className='mt-4'>Solution</h2>
                 <p>E-commerce distribution</p>
                 <p>F-commerce</p>
@@ -47,7 +51,8 @@ const Footer = () => {
                 <p>Join with warehouse</p>
                 <p>About electronics warehouse</p>
             </div>
-            <p className='mx-auto'><span> &copy; </span> All right reserved md jubayer khan</p>
+            </div>
+            <p className='text-center text-white' style={{backgroundColor: '#54576d', margin:'0px'}}><span> &copy; </span> All right reserved md jubayer khan</p>
         </div>
     );
 };

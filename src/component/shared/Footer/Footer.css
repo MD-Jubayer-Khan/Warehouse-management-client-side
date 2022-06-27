@@ -1,7 +1,5 @@
-.footer-area{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #54576d;
-    color: rgb(216, 216, 216)
-};
+@media screen and (max-width: 668px) {
+    .footer-area{
+        flex-wrap: wrap;
+    }   
+}
