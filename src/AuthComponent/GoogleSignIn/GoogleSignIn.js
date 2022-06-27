@@ -18,7 +18,7 @@ const GoogleSignIn = () => {
     return (    
           <div>
             {error}
-             <Button onClick={()=>signInWithGoogle()} className='bg-info text-white border-none d-block mx-auto'>Google Sign In</Button>
+             <Button onClick={()=>signInWithGoogle()} className='btn btn-dark mt-4 text-white border-none d-block mx-auto'>Google Sign In</Button>
             </div>
     );
 };

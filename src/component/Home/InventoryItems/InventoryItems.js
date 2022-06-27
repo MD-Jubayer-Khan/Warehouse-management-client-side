@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './InventoryItems.css'
 
 const InventoryItems = () => {
@@ -16,7 +16,7 @@ const InventoryItems = () => {
                 <h2>Some of </h2> 
                 <h3>Our Items</h3> 
                 <p>Here's we stored various kind of electronics product such as computer, laptop, mobile, camera...etc want to know more about us</p> 
-                <button className='btn btn-info border'>Manage Items</button>
+                <Link to={'/manageItems'} className='btn btn-info border'>Manage Items</Link>
             </div>
             {
                 items.map(item => <Item key={item._id} item={item}></Item>)

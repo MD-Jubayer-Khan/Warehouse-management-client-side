@@ -4,6 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Spinner from '../../component/shared/Spinner/Spinner';
 import auth from '../../firebase.init';
+import GoogleSignIn from '../GoogleSignIn/GoogleSignIn'
 
 const SignIn = () => {
 
@@ -68,7 +69,9 @@ const SignIn = () => {
             <p className='mt-3'>Don't have an account? <Link to="/SignUp" className='text-info text-decoration-none' onClick={navigateSignUp}>Sign Up from here</Link> </p>
             <Link to="/SignIn" className='text-decoration-none' onClick={resetPassword}>Forget password?</Link>
 
+            <GoogleSignIn></GoogleSignIn>
         </div>
+        
     );
 };
 

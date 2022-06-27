@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Spinner from '../../component/shared/Spinner/Spinner';
 import auth from '../../firebase.init';
+import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 
 const SignUp = () => {
 
@@ -40,20 +41,22 @@ const SignUp = () => {
         createUserWithEmailAndPassword(email, password);
     }
     return (
-        <div className='register-form'>
-        <h2 style={{textAlign: 'center'}}>Please signUp</h2>
-        <form onSubmit={handleSignUp}>        
+        <div className='mx-auto text-center'>
+        <h2 className='text-center'>signUp Here</h2>
+        <form className=' mx-auto' onSubmit={handleSignUp}>        
             <input type="email" name="email" id="" placeholder='Email Address' required/>
-            
-            <input type="password" name="password" id="" placeholder='Password' required/>
+            <br />
+            <input className='mt-4 mb-3' type="password" name="password" id="" placeholder='Password' required/>
+            <br />
             <Button variant="primary" type="submit" value="Register" >
               Sign Up
             </Button>
         </form>
         <p>{error}</p>
         <p className='mt-2'>Already have an account? <Link to="/signIn" className='text-success' onClick={navigateSignIn}>Sign In</Link> </p>
-        </div>
 
+        <GoogleSignIn></GoogleSignIn>
+        </div>
  
     );
 };
