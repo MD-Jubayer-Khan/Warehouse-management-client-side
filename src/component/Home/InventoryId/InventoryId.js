@@ -13,7 +13,7 @@ const InventoryId = (props) => {
         .then(res => res.json())
         .then(data => setItem(data));
 
-    },[]);
+    },[id, item]);
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -38,7 +38,7 @@ const InventoryId = (props) => {
             headers:{
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(deliveredItem)
+            body: JSON.stringify({deliveredItem})
         })
         .then(res => res.json())
         .then(data => {
