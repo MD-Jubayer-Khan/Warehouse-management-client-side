@@ -6,6 +6,7 @@ const InventoryId = (props) => {
     return (
         <div>
             <h2>Item Id:{id}</h2>
+            <button>Delivered</button>
         </div>
     );
 };
