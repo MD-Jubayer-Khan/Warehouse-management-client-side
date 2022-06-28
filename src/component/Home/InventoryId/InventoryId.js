@@ -22,8 +22,7 @@ const InventoryId = (props) => {
         const newQuantity = qty - number
         const confirm = window.confirm('Are you sure you want to restock this item');
         if(confirm){
-             // const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
-        const url = `http://localhost:5000/itemQ/${id}`;
+             const url = `https://dry-mesa-29133.herokuapp.com/itemQ/${id}`;
         fetch(url, {
             method: 'PUT',
             headers:{
@@ -49,8 +48,7 @@ const InventoryId = (props) => {
         const quantity = item.quantity;
         const newQuantity = quantity - 1;
 
-        // const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
         fetch(url, {
             method: 'PUT',
             headers:{
