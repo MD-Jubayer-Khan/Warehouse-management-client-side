@@ -8,9 +8,7 @@ const InventoryId = () => {
     const [item, setItem] = useState({});
 
     useEffect(()=>{
-        // const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`
-        const url = `item/${id}`
-
+        const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`
         fetch(url)
         .then(res => res.json())
         .then(data => setItem(data));

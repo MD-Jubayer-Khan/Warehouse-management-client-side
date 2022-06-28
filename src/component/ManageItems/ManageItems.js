@@ -42,10 +42,9 @@ const ManageItems = () => {
             
           </div>
             
-       ) 
-       };
+                ) 
+         };
 
-    
         </div>
     );
 };

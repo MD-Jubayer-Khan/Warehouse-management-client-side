@@ -52,7 +52,7 @@ const SignUp = () => {
               Sign Up
             </Button>
         </form>
-        <p>{error}</p>
+        <p>{error.message}</p>
         <p className='mt-2'>Already have an account? <Link to="/signIn" className='text-success' onClick={navigateSignIn}>Sign In</Link> </p>
 
         <GoogleSignIn></GoogleSignIn>

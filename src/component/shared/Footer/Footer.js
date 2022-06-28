@@ -36,7 +36,7 @@ const Footer = () => {
                <p>Freeze</p>
                <p>All electronics device</p>
             </div>
-            <div className='col-md-4 mt-4'>
+            <div className='col-md-2 mt-4'>
                 <h2 className='mt-4'>Solution</h2>
                 <p>E-commerce distribution</p>
                 <p>F-commerce</p>
@@ -44,7 +44,7 @@ const Footer = () => {
                 <p>Brand commerce</p>
                 <p>Cross-border E-commerce</p>
             </div>
-            <div className='col-md-2 mt-4'>
+            <div className='col-md-4 mt-4'>
                 <h2 className='mt-4'>Company</h2>
                 <p>Leadership</p>
                 <p>Journey</p>

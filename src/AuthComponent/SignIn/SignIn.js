@@ -61,7 +61,7 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                {error}
+                {error.message}
                 <Button variant="primary" type="submit">
                   Sign In
                 </Button>
