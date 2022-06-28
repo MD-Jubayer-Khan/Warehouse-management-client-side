@@ -9,7 +9,8 @@ const InventoryItems = () => {
         fetch('https://dry-mesa-29133.herokuapp.com/item')
         .then(res => res.json())
         .then(data => setItems(data.slice(0, 4)))
-    },[])
+    },[]);
+    
     return (
         <div className=' inventory-item d-flex flex-wrap '  >
             <div className='col-md-2 mt-3 container p-4 border'>

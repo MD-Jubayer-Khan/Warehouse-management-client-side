@@ -7,6 +7,7 @@ const Footer = () => {
     return (
         <div >
             <div className='footer-area' style={{   display:' flex',
+            flexWrap:'wrap',
             width: '100%',
             backgroundColor: '#54576d',
             color:' rgb(216, 216, 216)'}}>
