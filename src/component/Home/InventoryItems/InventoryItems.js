@@ -6,7 +6,8 @@ const InventoryItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://dry-mesa-29133.herokuapp.com/item')
+        // fetch('https://dry-mesa-29133.herokuapp.com/item')
+        fetch('http://localhost:5000/item')
         .then(res => res.json())
         .then(data => setItems(data.slice(0, 4)))
     },[])

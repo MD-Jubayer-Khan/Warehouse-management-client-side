@@ -15,12 +15,27 @@ const InventoryId = (props) => {
 
     },[id, item]);
 
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = (event, item) => {
         event.preventDefault();
         const number = event.target.number.value;
+        const qty = item.quantity;
+        const newQuantity = qty - number
         const confirm = window.confirm('Are you sure you want to restock this item');
         if(confirm){
-            console.log(number);
+             // const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
+        const url = `http://localhost:5000/itemQ/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({newQuantity})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data);
+            alert('item delivered successfully')
+        })
         }
         else{
             alert("Please confirm to restock");
@@ -53,7 +68,7 @@ const InventoryId = (props) => {
 
     return (
         <div>           
-        <form onSubmit={handleFormSubmit} className='w-50 mx-auto mt-4 text-center' >
+        <form onSubmit={()=>handleFormSubmit(item)} className='w-50 mx-auto mt-4 text-center' >
             <input type="number" name='number' required/>
             <input className='btn-success ms-1' type="submit" value="Restock" />
         </form>
