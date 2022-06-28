@@ -13,7 +13,7 @@ const InventoryId = () => {
         .then(res => res.json())
         .then(data => setItem(data));
 
-    },[id]);
+    },[id, item]);
 
     const handleDelivered = (item) => {
 

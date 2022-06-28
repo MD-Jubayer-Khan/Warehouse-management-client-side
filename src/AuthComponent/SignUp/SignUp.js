@@ -29,7 +29,7 @@ const SignUp = () => {
     }
 
     if(loading){
-        <Spinner></Spinner>
+       return <Spinner></Spinner>
     }
 
 
@@ -44,15 +44,15 @@ const SignUp = () => {
         <div className='mx-auto text-center'>
         <h2 className='text-center'>signUp Here</h2>
         <form className=' mx-auto' onSubmit={handleSignUp}>        
-            <input type="email" name="email" id="" placeholder='Email Address' required/>
+            <input type="email" name="email" placeholder='Email Address' required/>
             <br />
-            <input className='mt-4 mb-3' type="password" name="password" id="" placeholder='Password' required/>
+            <input className='mt-4 mb-3' type="password" name="password" placeholder='Password' required/>
             <br />
             <Button variant="primary" type="submit" value="Register" >
               Sign Up
             </Button>
         </form>
-        <p>{error.message}</p>
+        <p>{error?.message}</p>
         <p className='mt-2'>Already have an account? <Link to="/signIn" className='text-success' onClick={navigateSignIn}>Sign In</Link> </p>
 
         <GoogleSignIn></GoogleSignIn>

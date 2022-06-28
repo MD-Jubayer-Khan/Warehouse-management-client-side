@@ -2,8 +2,10 @@ import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import Spinner from '../../component/shared/Spinner/Spinner';
 import auth from '../../firebase.init';
+import 'react-toastify/dist/ReactToastify.css';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn'
 
 const SignIn = () => {
@@ -32,7 +34,7 @@ const SignIn = () => {
     }
 
     if(loading){
-        <Spinner></Spinner>
+      return  <Spinner></Spinner>
     }
 
     const navigateSignUp = () => {
@@ -42,7 +44,7 @@ const SignIn = () => {
     const resetPassword = async() =>{
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email);
-        alert('email sent')
+        toast('email sent')
 
     }
     return (
@@ -61,14 +63,14 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                {error.message}
+                {error?.message}
                 <Button variant="primary" type="submit">
                   Sign In
                 </Button>
             </Form>
             <p className='mt-3'>Don't have an account? <Link to="/SignUp" className='text-info text-decoration-none' onClick={navigateSignUp}>Sign Up from here</Link> </p>
             <Link to="/SignIn" className='text-decoration-none' onClick={resetPassword}>Forget password?</Link>
-
+            <ToastContainer />
             <GoogleSignIn></GoogleSignIn>
         </div>
         

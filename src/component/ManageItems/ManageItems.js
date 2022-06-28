@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ManageItems = () => {
     const [items, setItems] = useState([]);
@@ -7,7 +8,7 @@ const ManageItems = () => {
         fetch('https://dry-mesa-29133.herokuapp.com/item')
         .then(res => res.json())
         .then(data => setItems(data))
-    },[])
+    },[items])
         const handleDelete = id =>{
             const confirm = window.confirm('Are you sure?');
             if(confirm){
@@ -23,7 +24,10 @@ const ManageItems = () => {
             }
         }
     return (
+        <div>
+            <p className='text-center'><Link to={'/addItems'} className='btn btn-info border w-50 mt-4'>Add Items</Link></p>
         <div className='container mt-4 d-flex flex-wrap'>
+            
         {
            items.map(item =><div key={item._id}>
             <div className="card m-4 p-4 col-md-5 card-item" style={{width:'22rem',
@@ -31,7 +35,7 @@ const ManageItems = () => {
               <img src={item.img} className="card-img-top" alt="..."/>
               <div classNames="card-body">
                 <h4 className="card-title">{item.name}</h4>
-                <p>description: {item.describe.slice(0, 30)}</p>
+                <p>description: {item.describe}</p>
                 <p className="card-text">Supplier: {item.supplier}</p>
                 <p>Price:{item.price}</p>
                 <p>Quantity:{item.quantity}</p>
@@ -45,6 +49,7 @@ const ManageItems = () => {
                 ) 
          };
 
+        </div>
         </div>
     );
 };

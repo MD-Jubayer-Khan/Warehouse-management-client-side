@@ -30,10 +30,18 @@ const Header = () => {
                      <Nav.Link as={Link} to="about" className='text-white'>About</Nav.Link>
                    </Nav>
                    <Nav>
-                     <Nav.Link as={Link} to='manageItems' className='text-white'>Manage Items</Nav.Link>
-                     <Nav.Link as={Link} to='myItems' className='text-white'>My Items</Nav.Link>
+                    {
+                      user && <>
+                       <Nav.Link as={Link} to='manageItems' className='text-white'>Manage Items</Nav.Link>
+                       <Nav.Link as={Link} to='myItems' className='text-white'>My Items</Nav.Link>
+                       <Nav.Link as={Link} to='addItems' className='text-white'>Add Item</Nav.Link>
+                        
+                      </>
+                    }
+
                      {
-                       user ?
+                       user ?  
+
                          <button className='btn btn-link text-warning text-decoration-none' onClick={handleLoggedOut}>sign out</button>
                                 :
                                 <Nav.Link className='text-white' as={Link} to="signIn">
