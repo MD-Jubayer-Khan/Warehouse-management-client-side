@@ -16,3 +16,16 @@ code {
   height: 800px;
   background-color: #54576d;
 };
+
+
+h1{
+  font-size: 95px;
+  z-index: 1;
+}
+
+@media screen and (max-width:668px) {
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+}

@@ -29,16 +29,19 @@ const InventoryId = (props) => {
         event.target.reset()
     };
 
-    const handleDelivered = () => {
-        const deliveredItem = 1;
+    const handleDelivered = (item) => {
 
-        const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
+        const quantity = item.quantity;
+        const newQuantity = quantity - 1;
+
+        // const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
+        const url = `http://localhost:5000/item/${id}`;
         fetch(url, {
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({deliveredItem})
+            body: JSON.stringify({newQuantity})
         })
         .then(res => res.json())
         .then(data => {
@@ -64,10 +67,9 @@ const InventoryId = (props) => {
             <Card.Text>Description: {item.describe} </Card.Text>
             <Card.Text>Supplier: {item.supplier} </Card.Text>
             <Card.Title>Quantity: {item.quantity}</Card.Title>
-            <Button onClick={handleDelivered} className='mt-2' variant="primary">Delivered</Button>
+            <Button onClick={()=>handleDelivered(item)} className='mt-2' variant="primary">Delivered</Button>
           </Card.Body>
         </Card>
-  =
         </div>
     );
 };
