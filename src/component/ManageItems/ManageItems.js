@@ -30,7 +30,7 @@ const ManageItems = () => {
             
         {
            items.map(item =><div key={item._id}>
-            <div className="card m-4 p-4 col-md-5 card-item" style={{width:'22rem',
+            <div className="card m-4 p-4 col-md-5 card-item" style={{width:'20rem',
             }} >
               <img src={item.img} className="card-img-top" alt="..."/>
               <div classNames="card-body">
@@ -40,14 +40,14 @@ const ManageItems = () => {
                 <p>Price:{item.price}</p>
                 <p>Quantity:{item.quantity}</p>
 
-              </div> <button className='btn btn-danger w-25 mx-auto text center' onClick={() => handleDelete(item._id)}>Delete</button>
+              </div> <button className='btn btn-danger w-50 mx-auto text center' onClick={() => handleDelete(item._id)}>Delete</button>
             </div>
            
             
           </div>
             
                 ) 
-         };
+         }
 
         </div>
         </div>

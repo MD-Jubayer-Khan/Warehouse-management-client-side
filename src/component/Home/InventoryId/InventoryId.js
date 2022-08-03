@@ -39,7 +39,7 @@ const InventoryId = () => {
     return (
         <div>     
             <RestockQty></RestockQty>      
-         <Card className='mt-4 mx-auto' style={{ width: '30rem' }}>
+         <Card className='mt-4 mx-auto' style={{ width: '22rem' }}>
           <Card.Img variant="top" src={item.img} />
           <Card.Body>
             <Card.Title>Name: {item.name}</Card.Title>

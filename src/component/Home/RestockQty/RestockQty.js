@@ -32,7 +32,7 @@ const RestockQty = () => {
         .then(res => res.json())
         .then(data => {
             console.log('success', data);
-            alert('item delivered successfully')
+            alert('item restock successfully')
         })
         }
         else{

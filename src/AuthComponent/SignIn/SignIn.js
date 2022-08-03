@@ -3,7 +3,6 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
-import Spinner from '../../component/shared/Spinner/Spinner';
 import auth from '../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn'
@@ -34,7 +33,12 @@ const SignIn = () => {
     }
 
     if(loading){
-      return  <Spinner></Spinner>
+      return  <p>Loading..</p>
+    }
+
+   let errMsg ;
+    if(error){
+        errMsg = <p className='text-danger'>{error?.message}</p>
     }
 
     const navigateSignUp = () => {
@@ -63,7 +67,7 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                {error?.message}
+                {errMsg}
                 <Button variant="primary" type="submit">
                   Sign In
                 </Button>

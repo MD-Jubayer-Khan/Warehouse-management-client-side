@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import Spinner from '../../component/shared/Spinner/Spinner';
 import auth from '../../firebase.init';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 
@@ -29,7 +28,7 @@ const SignUp = () => {
     }
 
     if(loading){
-       return <Spinner></Spinner>
+       return <p>Loading...</p>
     }
 
 
