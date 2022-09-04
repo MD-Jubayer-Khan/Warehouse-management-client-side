@@ -3,7 +3,7 @@ h1{
     z-index: 1;
 }
 
-@media screen and (max-width:668px) {
+@media screen and (max-width:378px) {
     h1 {
       font-size: 35px;
       text-align: center;
