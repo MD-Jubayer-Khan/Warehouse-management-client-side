@@ -8,7 +8,7 @@ const AddItem = () => {
     
     const onSubmit = data => {
         console.log(data);
-        fetch("https://dry-mesa-29133.herokuapp.com/item", {
+        fetch("https://inventory-management-server-two.vercel.app//item", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

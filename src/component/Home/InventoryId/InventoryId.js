@@ -8,7 +8,7 @@ const InventoryId = () => {
     const [item, setItem] = useState({});
 
     useEffect(()=>{
-        const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`
+        const url = `https://inventory-management-server-two.vercel.app//item/${id}`
         fetch(url)
         .then(res => res.json())
         .then(data => setItem(data));
@@ -20,7 +20,7 @@ const InventoryId = () => {
         const quantity = item.quantity;
         const newQuantity = quantity - 1;
 
-        const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
+        const url = `https://inventory-management-server-two.vercel.app//item/${id}`;
         fetch(url, {
             method: 'PUT',
             headers:{

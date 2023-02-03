@@ -6,7 +6,7 @@ const RestockQty = () => {
     const [item, setItem] = useState({});
 
     useEffect(()=>{
-        const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`
+        const url = `https://inventory-management-server-two.vercel.app//item/${id}`
 
         fetch(url)
         .then(res => res.json())
@@ -21,7 +21,7 @@ const RestockQty = () => {
         const newQuantity = (+qty) + (+number);
         const confirm = window.confirm('Are you sure you want to restock this item');
         if(confirm){
-         const url = `https://dry-mesa-29133.herokuapp.com/itemQ/${id}`;
+         const url = `https://inventory-management-server-two.vercel.app//itemQ/${id}`;
         fetch(url, {
             method: 'PUT',
             headers:{

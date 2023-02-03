@@ -5,14 +5,14 @@ const ManageItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://dry-mesa-29133.herokuapp.com/item')
+        fetch('https://inventory-management-server-two.vercel.app//item')
         .then(res => res.json())
         .then(data => setItems(data))
     },[items])
         const handleDelete = id =>{
             const confirm = window.confirm('Are you sure?');
             if(confirm){
-                const url = `https://dry-mesa-29133.herokuapp.com/item/${id}`;
+                const url = `https://inventory-management-server-two.vercel.app//item/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })
